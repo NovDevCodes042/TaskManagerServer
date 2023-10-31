@@ -4,12 +4,16 @@ const app = express();
 const mongoose = require ('mongoose');
 // const PORT = 5050
 const PORT = process.env.PORT || 5050;
+const cors = require('cors')
 const taskRouter = require('./Routes/TaskRouter');
 
 
 //midware
 
 app.use(express.json());
+app.use(cors())
+
+
 
 
 
